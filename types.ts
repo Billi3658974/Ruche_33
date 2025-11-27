@@ -33,8 +33,3 @@ export interface Event {
   description: string;
   type: 'Réunion' | 'Action' | 'Formation';
 }
-
-export interface EducationalContent {
-  title: string;
-  content: string; // Markdown
-}
