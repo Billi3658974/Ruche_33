@@ -37,5 +37,4 @@ export interface Event {
 export interface EducationalContent {
   title: string;
   content: string; // Markdown
-  generatedByAI: boolean;
 }

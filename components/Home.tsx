@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Home: React.FC = () => {
+interface HomeProps {
+  setActiveTab: (tab: string) => void;
+}
+
+const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
   return (
     <div className="space-y-12 animate-fade-in">
       {/* Hero Section */}
@@ -22,7 +26,10 @@ const Home: React.FC = () => {
             <a href="#discord" className="rounded-md bg-amber-500 px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 transition-all">
               Rejoindre le Discord
             </a>
-            <button onClick={() => window.location.hash = 'governance'} className="text-sm font-semibold leading-6 text-white hover:text-amber-400 transition-colors">
+            <button 
+              onClick={() => setActiveTab('governance')} 
+              className="text-sm font-semibold leading-6 text-white hover:text-amber-400 transition-colors"
+            >
               Voir les propositions <span aria-hidden="true">→</span>
             </button>
           </div>

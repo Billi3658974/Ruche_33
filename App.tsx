@@ -15,7 +15,7 @@ const App: React.FC = () => {
       case 'home':
         return (
           <>
-            <Home />
+            <Home setActiveTab={setActiveTab} />
             <DiscordWidget />
           </>
         );
@@ -28,7 +28,7 @@ const App: React.FC = () => {
       case 'university':
         return <PopularUniversity />;
       default:
-        return <Home />;
+        return <Home setActiveTab={setActiveTab} />;
     }
   };
 
